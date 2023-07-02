@@ -1,0 +1,165 @@
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--vt-c-white);
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+
+  --section-gap: 160px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  background-color: #f3f3f3;
+}
+body {
+  /* min-height: 100vh; */
+  /* color: var(--color-text); */
+  /* background: var(--color-background); */
+  font-family: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu,
+    Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+ul {
+    list-style: none;
+}
+a {
+    cursor: pointer;
+    text-decoration: none;
+}
+i{
+    font-size: 16px;
+}
+    /* background-color: rgba(247,248,250,0.7); */
+/* 
+ */
+.container {
+  position: relative;
+  flex-grow: 1;
+  width: auto;
+  margin: 0 auto;
+}
+
+/*section.main部分样式*/
+section.main .main-container{
+    display: flex;
+}
+
+.left-container .topics-nav{
+    width: 150px !important;
+    height: 100%;
+    margin-right: 10px;
+}
+.left-container .topics-main{
+    width: 100%;
+    height: 100%;
+    flex: 1;
+}
+
+/*max是包括，min不包括 */
+
+
+/*下面两个媒体查询，用于固定顶部导航栏 */
+@media screen and (min-width:1024px) {
+    header.header {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    section.main {
+        margin-top: 56px;
+    }
+}
+@media screen and (max-width:1023px) {
+    header.header {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    section.main{
+        margin-top: 46px;
+    }
+}
+
+.load-more {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.navbar-item {
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+}
+
+/*小部件样式，比如右侧的“公告”，“签到排行榜”*/
+.widget {
+    padding: 0 12px;
+    margin-top: 10px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+.widget:first-child{
+    margin: 0;
+}
+.widget .widget-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 0;
+    font-size: 16px;
+    font-weight: 700;
+    border-bottom: 1px solid #e9e9e9;
+}
+.widget .widget-content {
+    font-size: 0.8rem;
+    padding: 8px 0;
+    word-break: break-all;
+}
+
+/*下面field样式，主要是用于signup,signin,create页面*/
+.field {
+    margin-bottom: 12px;
+}
+.field input {
+    border: 1px solid #48c78e;
+    border-radius: 4px;
+    padding: 7px 40px;
+    width: 100%;
+    height: 40px;
+    line-height: 1.5;
+    outline: none;
+}
+/*tab标签的样式，比如个人中心，修改资料页面等可见到*/
+.tabs a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid #dbdbdb;
+    margin-bottom: -1px;
+    padding: .5em 1em;
+    vertical-align: top;
+    color: #333;
+}
+.tabs li.is-active a {
+    border-bottom-color: #485fc7;
+    color: #485fc7;
+}
+.signin,
+.signup{
+    max-width: 500px;
+    margin: auto;
+    padding: 0 20px;
+    border-radius: 1px;
+    background-color: #fff;
+}
